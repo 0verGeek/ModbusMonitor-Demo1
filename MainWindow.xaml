@@ -1,0 +1,25 @@
+﻿<Window x:Class="ModbusMonitor_Demo1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModbusMonitor_Demo1"
+        mc:Ignorable="d"
+        Title="Modbus测试工具" Height="200" Width="400">
+    <!-- 将窗口的 DataContext 指向你的 ViewModel 实例 -->
+    <Window.DataContext>
+        <local:MainViewModel/>
+    </Window.DataContext>
+
+    <Grid Margin="20">
+        <StackPanel VerticalAlignment="Center">
+            <!-- 正确的绑定语法：使用大括号和 Binding -->
+            <Button Command="{Binding ConnectCommand}" Content="连接MThings从站" 
+                    Width="150" Height="30" Margin="0,0,0,10"/>
+            <Button Command="{Binding ReadTemperatureCommand}" Content="读取40001寄存器值" 
+                    Width="150" Height="30" Margin="0,0,0,10" IsEnabled="{Binding IsBtnEnabled}"/>
+            <TextBlock Text="{Binding Status}" FontSize="14" 
+                       HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>
