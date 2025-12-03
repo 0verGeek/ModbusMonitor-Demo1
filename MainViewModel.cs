@@ -55,41 +55,5 @@ namespace ModbusMonitor_Demo1
             }
         }
     }
-
-    //private void BtnConnect_Click(object sender, RoutedEventArgs e)
-    //    {
-    //        try
-    //        {
-    //            // 调用Connect方法连接127.0.0.1:502
-    //            bool isConnected = _modbusService.Connect();
-    //            if (isConnected)
-    //            {
-    //                TxtResult.Text = "结果：连接成功！";
-    //                BtnReadTemp.IsEnabled = true; // 连接成功后启用读取按钮
-    //            }
-    //            else
-    //            {
-    //                TxtResult.Text = "结果：连接失败，请检查MThings是否启动";
-    //            }
-    //        }
-    //        catch (Exception ex)
-    //        {
-    //            TxtResult.Text = $"结果：连接出错 → {ex.Message}";
-    //        }
-    //    }
-    //    // 读取温度按钮点击事件（异步）
-    //    private async void BtnReadTemp_Click(object sender, RoutedEventArgs e)
-    //    {
-    //        try
-    //        {
-    //            // 调用ReadTemperature读取40001寄存器（slaveId=1）
-    //            int tempValue = await _modbusService.ReadTemperature();
-    //            TxtResult.Text = $"结果：读取成功！40001寄存器值 = {tempValue}";
-    //        }
-    //        catch (Exception ex)
-    //        {
-    //            TxtResult.Text = $"结果：读取出错 → {ex.Message}";
-    //        }
-    //    }
 }
 
